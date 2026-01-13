@@ -1,0 +1,48 @@
+[
+    {
+        "title": "Services",
+        "content": "Welcome to our services page.",
+        "status": "publish",
+        "children": [
+            {
+                "title": "Web Design",
+                "content": "Professional web design services.",
+                "status": "publish"
+            },
+            {
+                "title": "Development",
+                "content": "Custom web development solutions.",
+                "status": "publish",
+                "children": [
+                    {
+                        "title": "Frontend Development",
+                        "content": "Modern frontend solutions.",
+                        "status": "publish"
+                    },
+                    {
+                        "title": "Backend Development",
+                        "content": "Robust backend systems.",
+                        "status": "publish"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "About Us",
+        "content": "Learn more about our company.",
+        "status": "publish",
+        "children": [
+            {
+                "title": "Our Team",
+                "content": "Meet our talented team.",
+                "status": "publish"
+            },
+            {
+                "title": "Our History",
+                "content": "Our company's journey.",
+                "status": "publish"
+            }
+        ]
+    }
+]

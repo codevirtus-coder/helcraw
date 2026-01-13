@@ -1,0 +1,77 @@
+.wpcf7-form {
+    width: 100%;
+}
+
+.wpcf7-form p {
+    margin-bottom: 1rem;
+    /* Adjust spacing if needed */
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="tel"],
+.wpcf7-form input[type="url"],
+.wpcf7-form input[type="password"],
+.wpcf7-form input[type="search"],
+.wpcf7-form input[type="date"],
+.wpcf7-form input[type="number"],
+.wpcf7-form textarea,
+.wpcf7-form select {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.form-control:focus,
+.wpcf7-form-control:focus,
+.wpcf7-form-control {
+    @extend .form-control;
+    background-color: rgba(255, 255, 255, .2);
+    border: 1px solid var(--bs-gray-300);
+    border-radius: 20px;
+    color: var(--bs-white);
+}
+
+label,
+.form-label {
+    display: inline-block;
+    color: var(--bs-white);
+    font-weight: 600;
+    margin-top: .5em;
+    margin-bottom: .2rem;
+}
+
+
+input.wpcf7-form-control.wpcf7-submit.has-spinner {
+    @extend .btn;
+    @extend .btn-secondary;
+    border-radius: 20px;
+    padding: .5em 2em;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: none;
+    box-shadow: none;
+    border: none;
+}
+
+
+
+// Success Message
+.wpcf7 form.sent .wpcf7-response-output {
+    border-color: var(--bs-success);
+    border: var(--bs-success);
+    background-color: var(--bs-success);
+    color: var(--bs-white);
+    padding: 20px;
+}
+
+// Invalid/unaccepted Message
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
+    border-color: var(--bs-warning);
+    border: var(--bs-warning);
+    background-color: var(--bs-warning);
+    color: var(--bs-black);
+    padding: 20px;
+    margin: 20px 0;
+}

@@ -1,0 +1,62 @@
+//
+// Override Bootstrap Color Variables
+//
+$primary: #09264c;
+$secondary: #0a61e2;
+$success: #036f3c;
+$info: #364eeaff;
+$warning: #ffd100;
+$danger: #ed3237;
+// $light: #yourLightColor;
+// $dark: #yourDarkColor;
+
+//
+//Default variable overrides
+//
+$body-bg: white;
+// $font-family-base: 'Montserrat', sans-serif;
+
+// Import remaining Bootstrap styles
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Additional Custom Code
+// @import './aos';
+
+@import "./banner";
+@import "./buttons";
+@import "./cards";
+@import "./contact";
+@import "./footer";
+@import "./forms";
+@import "./icons-bootstrap";
+@import "./icons-helcraw";
+@import "./list-group";
+@import "./nav-desktop";
+@import "./nav-mobile";
+@import "./pagination";
+@import "./swiper-bundle.min";
+@import "./table";
+@import "./careers";
+@import "./home";
+@import "./blocks";
+@import "./typography";
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm) {
+}
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) {
+}
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@include media-breakpoint-up(xxl) {
+}

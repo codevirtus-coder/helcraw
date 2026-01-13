@@ -1,0 +1,269 @@
+.hero-inner {
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  align-items: stretch;
+}
+
+/* LEFT SIDE */
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #1a3c6a;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #00000033;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(15, 30, 40, 0.06);
+}
+
+.hero-badge .badge-icon {
+  width: 25px;
+  height: 25px;
+  display: block;
+  object-fit: contain;
+  border-radius: px;
+  filter: none;
+}
+
+.hero-title .hl {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 4px;
+}
+
+.hero-title .hl .hl-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 2px;
+  box-shadow: 0 8px 18px rgba(9, 30, 66, 0.09);
+  display: inline-block;
+  object-fit: contain;
+}
+
+.hero-mini-image img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-badge .badge-icon {
+    width: 14px;
+    height: 14px;
+  }
+  .hero-title .hl .hl-icon {
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+  }
+}
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  line-height: 1;
+  font-weight: 600;
+  color: #12345b;
+  margin-bottom: 24px;
+}
+
+.hero-title-service {
+  font-size: clamp(3rem, 3vw, 4.5rem);
+  line-height: 1;
+  font-weight: 600;
+  color: #12345b;
+  margin-bottom: 24px;
+}
+
+.hero-title span {
+  color: #6fc2f0;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: #2c79c1;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+
+.hero-mini-image {
+  width: 460px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero-mini-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* RIGHT SIDE */
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-main-image-service {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay Card */
+
+.hero-overlay-card {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.service-section {
+  background: #f1f2fa;
+  padding: 50px 0;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  width: 420px;
+  height: 580px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.title-service {
+  font-size: 19px;
+  line-height: 1;
+  font-weight: 600;
+  color: #12345b;
+  margin-bottom: 24px;
+}
+
+.hero-overlay-card-service {
+  display: flex;
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid #00000033;
+}
+
+.hero-main-image-service {
+  border-radius: 10px;
+}
+
+.hero-overlay-card .stars {
+  color: #4aa3df;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.hero-overlay-card p {
+  margin-bottom: 12px;
+}
+
+.hero-overlay-card .avatars {
+  display: flex;
+}
+
+.hero-overlay-card .avatars img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-left: -10px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 992px) {
+  /* stack layout */
+  .hero-inner {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  /* center right side content */
+  .hero-right {
+    justify-content: center;
+    display: none;
+  }
+
+  /* prevent image overflow */
+  .hero-image-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hero-image-wrapper img,
+  .hero-main-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* move overlay card BELOW image on mobile */
+  .hero-overlay-card {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: 16px;
+  }
+
+  /* mini image full width */
+  .hero-mini-image {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .hero-mini-image img {
+    height: auto;
+  }
+
+  /* slightly reduce title size */
+  .hero-title {
+    font-size: clamp(3rem, 6vw, 4.2rem);
+  }
+}
+
+/* extra small phones */
+@media (max-width: 480px) {
+  .hero-inner {
+    gap: 20px;
+  }
+
+  .hero-overlay-card {
+    padding: 14px;
+  }
+}

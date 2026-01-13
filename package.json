@@ -1,0 +1,21 @@
+{
+	"name": "helcraw-water",
+	"version": "1.1.0",
+	"description": "Helcraw Water, a custom theme developed by Mehluli Hikwa",
+	"author": "Mehluli Hikwa",
+	"scripts": {
+		"css-prod": "sass --no-source-map --watch scss/_entry.scss:css/app.css --style compressed",
+		"css-dev": "sass --no-source-map --watch scss/_entry.scss:css/app.css",
+		"js-prod": "webpack --mode=production --watch",
+		"js-dev": "webpack --mode=development --watch"
+	},
+	"devDependencies": {
+		"sass": "^1.94.2",
+		"webpack": "^5.103.0",
+		"webpack-cli": "^6.0.1"
+	},
+	"dependencies": {
+		"bootstrap": "^5.3.8",
+		"jquery": "^3.7.1"
+	}
+}

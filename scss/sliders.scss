@@ -1,0 +1,122 @@
+.homeSlider {
+  .slider-section {
+    position: relative;
+    height: 600px;
+    width: 200px;
+    overflow: hidden;
+    color: var(--bs-white);
+    display: flex;
+    align-items: center;
+    background-color: var(--bs-secondary);
+  }
+
+  .slider-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    display: hidden;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  // Gradient overlay above image but below content
+  // .slider-section::before {
+  //     content: '';
+  //     position: absolute;
+  //     inset: 0;
+  //     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+  //     z-index: 1;
+  // }
+
+  .slider-content h1 {
+    color: var(--bs-white) !important;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  // Ensure content sits above image and overlay
+  .slider-section .slider-content,
+  .slider-section .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    bottom: 5% !important;
+    top: auto !important;
+  }
+
+  .swiper-button-next {
+    right: 10px !important;
+  }
+
+  .swiper-button-prev {
+    left: 88% !important;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border: 2px solid var(--bs-white) !important;
+    border-radius: 50%;
+    color: var(--bs-white) !important;
+    width: 50px !important;
+    height: 50px !important;
+
+    &:hover {
+      background-color: var(--bs-secondary) !important;
+      border: 2px solid var(--bs-secondary) !important;
+      color: var(--bs-white) !important;
+    }
+
+    // Icons
+    &:after,
+    &:after {
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and down)
+@include media-breakpoint-down(md) {
+  .homeSlider {
+    .slider-section {
+      height: 300px;
+    }
+
+    .slider-content h1 {
+      font-size: 2rem;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: absolute;
+      bottom: 5% !important;
+      top: auto !important;
+    }
+
+    .swiper-button-next {
+      right: 10px !important;
+    }
+
+    .swiper-button-prev {
+      left: 10px !important;
+    }
+  }
+}

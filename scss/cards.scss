@@ -1,0 +1,129 @@
+/********************************
+
+    1. Deafult Card
+	2. Landing Page Block Card
+    3. Matches Card
+    4. Teams Card
+    5. Fixture & Results
+
+********************************/
+
+//
+// 1. Deafult Card
+//
+.card {
+  // @extend .h-100;
+  border: none;
+  border-radius: 20px !important;
+  // box-shadow: var(--bs-box-shadow);
+  // background-color: var(--bs-gray-100);
+  transition: var(--bs-transition);
+
+  .card-img,
+  .card-img-top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  // &:hover {
+  //     box-shadow: none;
+  // }
+
+  .card-title {
+    @extend .fw-bold;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body .badge {
+    align-self: flex-start;
+  }
+
+  // Align Button at bottom of card
+  .card-body .btn {
+    align-self: flex-start;
+    margin-top: auto;
+  }
+  .card-body .card-title {
+    color: #1a3c6a;
+  }
+
+  a {
+    .card-title {
+      @extend .text-black;
+      transition: var(--bs-transition);
+      color: #1a3c6a !important;
+
+      &:hover {
+        @extend .text-secondary;
+      }
+    }
+
+    img {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .card-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    color: #6fbbe6;
+  }
+
+  a.card-link {
+    @extend .text-uppercase;
+    color: var(--bs-primary);
+    font-weight: 600;
+
+    &:hover {
+      color: var(--bs-secondary);
+    }
+
+    &::after {
+      @extend .ps-2, .fw-bolder;
+      content: "\F280";
+      display: inline-block;
+      font-family: "bootstrap-icons" !important;
+      position: relative;
+      top: 1.5px;
+    }
+  }
+}
+
+//
+// 2. Landing Page Block Card
+//
+.card.content {
+  // @extend .h-100;
+  // border: none;
+  // border-radius: 20px !important;
+  // margin-bottom: 20px;
+
+  .card-img {
+    border-radius: 20px;
+  }
+
+  .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+  }
+
+  .card-title {
+    color: var(--bs-white) !important;
+  }
+}

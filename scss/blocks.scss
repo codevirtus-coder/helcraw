@@ -1,0 +1,1067 @@
+/* =========================
+   Left–Right 
+   ========================= */
+
+.images-side-by-side .lr-image-box {
+  width: 100%;
+  height: 420px;
+  border-radius: 16px;
+  margin-bottom: 1rem !important;
+  overflow: hidden;
+}
+
+.images-side-by-side .lr-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .images-side-by-side .lr-image-box {
+    height: 320px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .images-side-by-side .lr-image-box {
+    height: 240px;
+  }
+}
+
+/* Stats + hero image block - helcraw */
+.helcraw-stats-hero {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Stats row */
+.helcraw-stats {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+/* Single stat tile */
+.helcraw-stat {
+  flex: 1 1 20%;
+  min-width: 140px;
+  text-align: center;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+/* Number styles */
+.helcraw-number {
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 8px;
+  display: inline-block;
+  color: #123a66;
+  font-size: 40px;
+}
+
+/* The numeric main part */
+.helcraw-number .helcraw-number-main {
+  display: inline;
+  color: #123a66;
+}
+
+/* The accent (plus or percent) */
+.helcraw-number .helcraw-number-accent {
+  display: inline;
+  color: #7fb0df; /* light blue accent */
+  margin-left: 4px;
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+/* Label under number */
+.helcraw-label {
+  font-size: 16px;
+  color: #5d6f88;
+  margin-top: 6px;
+  line-height: 1.2;
+}
+
+/* Centered dotted pointer */
+.helcraw-pointer-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+// .helcraw-pointer {
+//   width: 0;
+//   border-left: 2px dotted #7fb0df;
+//   height: 22px;
+//   position: relative;
+// }
+.helcraw-pointer::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7fb0df;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+}
+
+/* Hero image card */
+.helcraw-hero-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(18, 58, 102, 0.08);
+}
+.helcraw-hero-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Empty hero state */
+.helcraw-hero-empty {
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  color: #6b7c92;
+  background: #fafcff;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .helcraw-number {
+    font-size: 34px;
+  }
+  .helcraw-stat {
+    min-width: 120px;
+  }
+}
+@media (max-width: 767px) {
+  .helcraw-number {
+    font-size: 28px;
+  }
+  .helcraw-stat {
+    min-width: 45%;
+  }
+  .helcraw-pointer {
+    height: 14px;
+  }
+}
+
+.hero-badge--center {
+  display: flex;
+  justify-content: center;
+}
+
+/* Mission block: .helcraw-mission-block
+   Adjust colors, spacing and fonts to match your theme if needed. */
+
+.helcraw-mission-block .container {
+  margin: 0 auto;
+  padding: 48px 0;
+  box-sizing: border-box;
+}
+
+/* Row layout */
+.helcraw-mission-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Left column (text) */
+.helcraw-mission-left {
+  flex: 1 1 50%;
+  min-width: 300px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+/* Badge */
+.helcraw-mission-badge {
+  display: inline-block;
+  background: #f4fbff;
+  color: #19507b;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(25, 80, 123, 0.06);
+}
+
+/* Heading */
+.helcraw-mission-heading {
+  line-height: 1.05;
+  color: #123a66;
+  margin: 0 0 18px 0;
+  font-weight: 700;
+}
+
+/* Paragraphs */
+.helcraw-mission-text,
+.helcraw-mission-text-secondary {
+  color: #5d6f88;
+
+  margin-bottom: 14px;
+  max-width: 560px;
+}
+
+/* CTA button */
+.helcraw-mission-cta .helcraw-mission-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: #123a66;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 4px 14px rgba(18, 58, 102, 0.08);
+}
+
+/* Right column (image) */
+.helcraw-mission-right {
+  flex: 0 0 45%;
+  min-width: 280px;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+.helcraw-mission-image-card {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 26px rgba(18, 58, 102, 0.08);
+}
+
+.helcraw-mission-image-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.helcraw-features {
+  margin-top: 14px;
+  margin-bottom: 18px;
+  padding-left: 20px;
+  color: #5d6f88;
+}
+.helcraw-features li {
+  margin-bottom: 8px;
+  line-height: 1.45;
+  list-style: disc;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 900px) {
+  .helcraw-mission-row {
+    gap: 20px;
+  }
+  .helcraw-mission-left,
+  .helcraw-mission-right {
+    flex: 1 1 100%;
+  }
+  .helcraw-mission-right {
+    justify-content: center;
+  }
+  .helcraw-mission-heading {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .helcraw-mission-heading {
+    font-size: 24px;
+  }
+  .helcraw-mission-cta .helcraw-mission-btn {
+    padding: 10px 14px;
+  }
+}
+
+/* Expertise Block */
+.helcraw-expertise-block {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.helcraw-expertise-inner.contain {
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Columns */
+.helcraw-expertise-column {
+  box-sizing: border-box;
+}
+
+/* Text column (left by default) */
+.helcraw-expertise-text {
+  flex: 0 0 48%;
+  padding: 64px 50px 0 95px;
+  background: #f1f2fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Media column (right by default) */
+.helcraw-expertise-media {
+  flex: 1 1 52%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Image fills column height and cropped nicely */
+.helcraw-expertise-image {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  display: block;
+  overflow: hidden;
+}
+
+.helcraw-expertise-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Heading + paragraph styling */
+.helcraw-expertise-heading {
+  color: #123a66;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.05;
+  margin: 0 0 20px 0;
+}
+
+.helcraw-expertise-copy {
+  color: #5d6f88;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* If layout flipped: image on left, text on right */
+.helcraw-expertise-inner.image-left {
+  flex-direction: row-reverse;
+}
+
+.helcraw-expertise-inner.image-left .helcraw-expertise-text {
+  padding: 64px 48px;
+}
+
+/* ---------- Responsive ---------- */
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .helcraw-expertise-text {
+    padding: 64px 50px 0 70px;
+  }
+  .helcraw-expertise-heading {
+    font-size: 40px;
+  }
+}
+
+/* Mobile: stack */
+@media (max-width: 900px) {
+  .helcraw-expertise-inner.contain {
+    flex-direction: column;
+  }
+
+  .helcraw-expertise-image img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+    object-position: center;
+  }
+
+  .helcraw-expertise-text {
+    padding: 48px 32px 0 10px;
+  }
+
+  .helcraw-expertise-text,
+  .helcraw-expertise-media {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .helcraw-expertise-text {
+    padding: 32px 20px;
+  }
+
+  .helcraw-expertise-image {
+    min-height: 240px;
+  }
+
+  .helcraw-expertise-heading {
+    font-size: 32px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .helcraw-expertise-text {
+    padding: 24px 16px;
+  }
+  .helcraw-expertise-heading {
+    font-size: 28px;
+  }
+  .helcraw-expertise-image {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .helcraw-expertise-text {
+    padding: 60px 44px 0 80px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .helcraw-expertise-text {
+    padding: 56px 36px 0 64px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .helcraw-expertise-text {
+    padding: 48px 28px 0 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .helcraw-expertise-inner.contain {
+    flex-direction: column;
+  }
+
+  .helcraw-expertise-text,
+  .helcraw-expertise-media {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .helcraw-expertise-text {
+    padding: 36px 20px;
+  }
+
+  .helcraw-expertise-image {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .helcraw-expertise-text {
+    padding: 32px 18px;
+  }
+
+  .helcraw-expertise-image {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .helcraw-expertise-text {
+    padding: 28px 16px;
+  }
+
+  .helcraw-expertise-image {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 420px) {
+  .helcraw-expertise-text {
+    padding: 24px 14px;
+  }
+
+  .helcraw-expertise-image {
+    min-height: 180px;
+  }
+}
+
+/* = Feature Row = */
+
+/* Panel wrapper */
+.helcraw-fr-panel {
+  background: #f6f9fc;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 6px 24px rgba(18, 58, 102, 0.03);
+  margin-bottom: 28px;
+}
+
+/* Inner container */
+.helcraw-fr-inner.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  gap: 28px;
+  align-items: stretch; /* ensure children stretch to same height */
+  box-sizing: border-box;
+}
+
+/* Column base */
+.helcraw-fr-col {
+  box-sizing: border-box;
+}
+
+/* Layout A: side left, text center, image right */
+.helcraw-fr-inner.layout-a .col-side-left {
+  flex: 0 0 22%;
+}
+.helcraw-fr-inner.layout-a .col-text-center {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 6px;
+} /* space-between -> CTA bottom */
+.helcraw-fr-inner.layout-a .col-image-right {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* Layout B: text left, image center, side right */
+.helcraw-fr-inner.layout-b .col-text-left {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 6px;
+}
+.helcraw-fr-inner.layout-b .col-image-center {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.helcraw-fr-inner.layout-b .col-side-right {
+  flex: 0 0 22%;
+}
+
+/* Ensure main-image and side-card share same height (stretch) */
+.helcraw-fr-main-image,
+.helcraw-fr-side-card {
+  min-height: 320px; /* adjust value if you want taller/shorter */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Main image fills available height and crops */
+.helcraw-fr-main-image {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 36px rgba(18, 58, 102, 0.06);
+}
+.helcraw-fr-main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Side card styling */
+.helcraw-fr-side-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 22px rgba(18, 58, 102, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+/* side-image box (white inner area) */
+.helcraw-fr-side-image-box {
+  background: #f1f6f9;
+  padding: 16px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.helcraw-fr-side-image-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* If side image includes CTA overlay (Variant B) */
+.helcraw-fr-side-image-with-cta {
+  position: relative;
+  display: block;
+}
+.helcraw-fr-side-cta-wrap {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+}
+.helcraw-fr-side-cta {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #123a66;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Headings & text */
+.helcraw-fr-heading {
+  margin: 0 0 12px 0;
+  font-size: 36px;
+  color: #123a66;
+  font-weight: 700;
+  line-height: 1.05;
+}
+.helcraw-fr-text {
+  font-size: 15px;
+  color: #5d6f88;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  max-width: 640px;
+}
+
+/* Features: bullets in A, numbers in B (rendered by PHP) */
+.helcraw-fr-features {
+  padding-left: 20px;
+  margin: 12px 0;
+  color: #5d6f88;
+}
+.helcraw-fr-features li {
+  margin-bottom: 8px;
+}
+
+/* CTA main button style (center) */
+.btn.btn-outline-primary.helcraw-fr-cta-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 2px solid rgba(18, 58, 102, 0.12);
+  background: #fff;
+  color: #123a66;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 12px;
+}
+
+/* Responsive fallback */
+@media (max-width: 992px) {
+  .helcraw-fr-panel {
+    padding: 18px;
+  }
+  .helcraw-fr-inner.container {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .helcraw-fr-main-image,
+  .helcraw-fr-side-card {
+    min-height: auto;
+    height: auto;
+  }
+  .helcraw-fr-heading {
+    font-size: 30px;
+  }
+  .helcraw-fr-side-image-box {
+    padding: 12px;
+  }
+}
+
+/* ----------------------------
+   Helcraw FAQ block styles
+   ---------------------------- */
+
+/* container / layout */
+.helcraw-faq-block {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 0;
+}
+.helcraw-faq-inner.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+}
+
+/* left large image */
+.helcraw-faq-left {
+  flex: 0 0 38%;
+  display: flex;
+  justify-content: flex-start;
+}
+.helcraw-faq-left-image-card {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(18, 58, 102, 0.06);
+}
+.helcraw-faq-left-image-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* right column */
+.helcraw-faq-right {
+  flex: 1 1 62%;
+}
+
+/* badge + heading */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f4fbff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #19507b;
+  margin-bottom: 18px;
+  border: 1px solid rgba(25, 80, 123, 0.06);
+}
+.helcraw-faq-heading {
+  font-size: 32px;
+  color: #123a66;
+  margin: 0 0 18px 0;
+  font-weight: 700;
+}
+
+/* list spacing */
+.helcraw-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.helcraw-faq-item {
+  display: block;
+}
+
+.helcraw-faq-question {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent !important;
+  border: 0;
+  padding: 6px 0;
+  cursor: pointer;
+  font-weight: 700;
+  color: #123a66;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.helcraw-faq-question,
+.helcraw-faq-question:hover,
+.helcraw-faq-question:focus,
+.helcraw-faq-question:active {
+  color: #123a66 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: transparent !important;
+  text-shadow: none !important;
+  transform: none !important;
+}
+
+.helcraw-faq-question * {
+  color: inherit !important;
+}
+
+.helcraw-faq-question .left-arrow,
+.helcraw-faq-question .faq-left-icon,
+.helcraw-faq-question > svg.left-arrow,
+.helcraw-faq-question::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* question text */
+.helcraw-faq-question-text {
+  display: block;
+  padding-right: 16px;
+}
+
+/* small chevron square on the right (toggle) */
+.helcraw-faq-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #eef4f9;
+  display: inline-block;
+  position: relative;
+  margin-left: 12px;
+  flex: 0 0 auto;
+  box-shadow: 0 2px 6px rgba(18, 58, 102, 0.04);
+}
+.helcraw-faq-toggle::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #123a66;
+  border-bottom: 2px solid #123a66;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -5px;
+  transition: transform 160ms ease;
+}
+
+/* rotate arrow when open, but do NOT change question background */
+.helcraw-faq-item.is-open .helcraw-faq-toggle::after {
+  transform: rotate(-135deg);
+}
+
+/* ANSWER panel - dark-blue rounded box with small image on right */
+.helcraw-faq-answer {
+  overflow: hidden;
+  transition: max-height 300ms ease;
+  margin-top: 8px;
+}
+.helcraw-faq-answer-inner {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: #123a66;
+  color: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  box-sizing: border-box;
+}
+.helcraw-faq-answer-copy {
+  flex: 1 1 auto;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* answer media: small image + CTA overlay on the right */
+.helcraw-faq-answer-media {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  box-sizing: border-box;
+}
+.helcraw-faq-answer-img-wrap {
+  width: 220px;
+  height: 84px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+.helcraw-faq-answer-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* CTA overlay: white pill inside the small image */
+.helcraw-faq-answer-cta-wrap {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+}
+.helcraw-faq-answer-cta {
+  display: inline-block;
+  background: #fff;
+  color: #123a66;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(18, 58, 102, 0.12);
+}
+
+/* hidden state handled by attribute 'hidden' (JS toggles it) */
+.helcraw-faq-answer[hidden] {
+  display: none;
+}
+
+/* responsive */
+@media (max-width: 992px) {
+  .helcraw-faq-inner.container {
+    flex-direction: column;
+    gap: 22px;
+  }
+  .helcraw-faq-left {
+    flex: 1 1 100%;
+  }
+  .helcraw-faq-right {
+    flex: 1 1 100%;
+  }
+  .helcraw-faq-answer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .helcraw-faq-answer-media {
+    width: 100%;
+    flex: 1 1 auto;
+    align-items: flex-start;
+  }
+  .helcraw-faq-answer-img-wrap {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+/* ========== Services grid: ensure grid items stretch ========== */
+.hcrw-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  align-items: stretch;
+  margin-bottom: 28px;
+  padding: 6px 0;
+  box-sizing: border-box;
+}
+
+.hcrw-services-grid > .hcrw-service-card {
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.hcrw-overlay-card {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  align-items: stretch;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #22222224;
+  box-shadow: 0 12px 30px rgba(18, 58, 102, 0.04);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.hcrw-overlay-inner {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  padding-right: 12px;
+  box-sizing: border-box;
+}
+
+.hcrw-image-box {
+  flex: 0 0 300px;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(18, 58, 102, 0.06);
+  box-sizing: border-box;
+}
+
+.hcrw-main-image {
+  width: 100%;
+  height: 218px;
+  object-fit: cover;
+  display: block;
+}
+
+.hcrw-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.hcrw-title {
+  margin: 0;
+  font-size: 20px;
+  color: #12345b;
+  font-weight: 700;
+}
+.hcrw-desc {
+  color: #6b7c8f;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.hcrw-service-card.site-container {
+  max-width: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .hcrw-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hcrw-services-grid > .hcrw-service-card {
+    height: auto;
+  }
+
+  .hcrw-overlay-card {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 16px;
+  }
+
+  .hcrw-image-box {
+    width: 100%;
+    height: 220px;
+    flex: 0 0 auto;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hcrw-image-box {
+    height: 160px;
+  }
+  .hcrw-title {
+    font-size: 16px;
+  }
+  .hcrw-desc {
+    font-size: 13px;
+  }
+}

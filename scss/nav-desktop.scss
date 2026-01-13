@@ -1,0 +1,176 @@
+//
+// Desktop Header
+//
+.desktop-header {
+  background-color: #fff;
+  display: block;
+  transition: var(--bs-transition);
+  border-bottom: 1px solid #00000033;
+  padding: 10px 0;
+
+  img.desktop-logo {
+    width: 150px;
+    padding: 10px 0;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .desktop-header {
+    display: none;
+  }
+}
+
+//
+// Navigation Menu
+//
+nav.menu {
+  display: flex;
+
+  > ul {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+
+    > li {
+      padding: 0;
+      margin: 0;
+      position: relative;
+
+      // NOTE: Adjust sub-menu position for last item
+      &.last-child ul {
+        width: max-content;
+        left: -100%;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+      }
+
+      a {
+        color: #1a3c6a;
+        display: block;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 20px 10px;
+        position: relative;
+
+        &:hover,
+        &[aria-current="page"] {
+          color: var(--bs-secondary);
+        }
+      }
+
+      // Second Level - Mega Menu
+      > ul.mega-menu {
+        display: none;
+        width: fit-content;
+        max-width: 600px;
+        background-color: var(--bs-secondary);
+        padding: 20px;
+        position: absolute;
+        z-index: 99;
+        left: 0;
+        right: 0;
+        margin: 0;
+        list-style: none;
+        box-shadow: 0px 2px 20px -5px rgba(123, 123, 123, 0.75);
+
+        > li {
+          margin: 0;
+          padding-bottom: 0;
+          list-style: none;
+          width: 50%;
+          background: none;
+          float: left;
+
+          a {
+            color: var(--bs-primary);
+            padding: 0.2em 0;
+            width: 95%;
+            display: block;
+            &:hover {
+              color: var(--bs-secondary);
+            }
+          }
+
+          > ul {
+            display: block;
+            padding: 0;
+            list-style: none;
+
+            > li {
+              float: left;
+              width: 100%;
+              padding: 10px 0;
+              margin: 0;
+              // font-size: .8em;
+
+              a {
+                border: 0;
+              }
+            }
+          }
+        }
+      }
+
+      // Second Level - Normal Menu
+      > ul {
+        display: none;
+        width: 250px;
+        background-color: var(--bs-white);
+        padding: 0;
+        position: absolute;
+        z-index: 99;
+        left: 0;
+        margin: 0;
+        list-style: none;
+        box-shadow: 0px 2px 20px -5px rgba(123, 123, 123, 0.75);
+
+        &.normal-sub {
+          width: 220px;
+          padding: 0;
+          margin: 0;
+
+          > li {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+
+            a {
+              display: block;
+              width: 100%;
+              box-sizing: border-box;
+              color: var(--bs-primary);
+              background-color: var(--bs-white);
+              border: 0;
+              padding: 10px;
+              margin: 0;
+
+              &:hover,
+              &[aria-current="page"] {
+                color: var(--bs-white);
+                background-color: var(--bs-primary);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Current Page color
+nav.menu > ul > li > a:hover,
+nav.menu > ul > li > a[aria-current="page"],
+nav.menu > ul > li.current_page_parent > a {
+  color: var(--bs-secondary);
+}
