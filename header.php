@@ -39,7 +39,7 @@
 					</div>
 
 					<div class="col-3 text-end">
-						<a href="<?php the_permalink(); ?>" class="btn btn-primary">
+						<a href="<?php the_permalink(); ?>/contact-us" class="hc-btn-icon-primary">
 							Contact Us
 						</a>
 					</div>

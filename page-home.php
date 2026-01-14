@@ -23,7 +23,7 @@ $slides = carbon_get_post_meta(get_option('page_on_front'), 'helcraw_slider');
 						supply
 					</h1>
 
-					<a href="#" class="btn btn-primary">Request A Meter</a>
+					<a href="#" class="hc-btn-icon ">Request A Meter</a>
 
 				</div>
 
@@ -91,7 +91,7 @@ $slides = carbon_get_post_meta(get_option('page_on_front'), 'helcraw_slider');
 						prepaid water metering & modern water-network solutions
 					</h1>
 
-					<a href="#" class="btn btn-primary">All Service</a>
+					<a href="#" class="hc-btn-icon">All Service</a>
 
 				</div>
 

@@ -507,7 +507,7 @@ function helcraw_custom_theme_options()
                 <?php endif; ?>
 
                 <?php if (! empty($href)) : ?>
-                    <a class="btn btn-light mt-2" href="<?= esc_url($href) ?>">View</a>
+                    <a class="hc-btn-icon-secondary mt-2" href="<?= esc_url($href) ?>">View</a>
                 <?php endif; ?>
             </div>
         </div>
@@ -913,7 +913,7 @@ function helcraw_custom_theme_options()
                 $btn_text = esc_html($btn_text_raw);
                 $target = $btn_external ? ' target="_blank" rel="noopener noreferrer"' : '';
                 $button_html = sprintf(
-                    '<a class="btn btn-primary helcraw-mission-btn" href="%s"%s>%s</a>',
+                    '<a class="hc-btn-icon-secondary" href="%s"%s>%s</a>',
                     esc_url($btn_href),
                     $target,
                     $btn_text
@@ -962,7 +962,7 @@ function helcraw_custom_theme_options()
                                 <?php endif; ?>
 
                                 <?php if ($button_html) : ?>
-                                    <div class="helcraw-mission-cta"><?php echo $button_html; ?></div>
+                                    <a><?php echo $button_html; ?></a>
                                 <?php endif; ?>
                             </div>
 
@@ -1091,7 +1091,7 @@ function helcraw_custom_theme_options()
                     $cta_href = esc_url(home_url('/' . ltrim($cta_url_raw, '/')));
                 }
                 $target = $cta_external ? ' target="_blank" rel="noopener noreferrer"' : '';
-                $cta_html = sprintf('<a class="btn btn-outline-primary helcraw-fr-cta-btn" href="%s"%s>%s</a>', $cta_href, $target, esc_html($cta_text_raw));
+                $cta_html = sprintf('<a class="hc-btn-icon-secondary" href="%s"%s>%s</a>', $cta_href, $target, esc_html($cta_text_raw));
             }
 
             // Build side CTA (overlay on small image)
@@ -1130,20 +1130,22 @@ function helcraw_custom_theme_options()
                             ?>
                                 <div class="helcraw-fr-col col-side-left">
                                     <?php if ($side_title || $side_img || $side_text) : ?>
-                                        <div class="helcraw-fr-side-card">
+                                        <div class="helcraw-fr-side-card ">
+
+
+                                            <?php if ($side_title) : ?>
+                                                <h3 class="sub-heading mt-2"><?php echo $side_title; ?></h3>
+                                            <?php endif; ?>
+
+                                            <?php if ($side_text) : ?>
+                                                <div class="helcraw-fr-side-text"><?php echo $side_text; ?></div>
+                                            <?php endif; ?>
+
                                             <?php if ($side_img) : // image at top for Variant A 
                                             ?>
                                                 <div class="helcraw-fr-side-image-box">
                                                     <img src="<?php echo $side_img; ?>" alt="<?php echo esc_attr($side_title ?: 'Side image'); ?>" />
                                                 </div>
-                                            <?php endif; ?>
-
-                                            <?php if ($side_title) : ?>
-                                                <h3 class="helcraw-fr-side-title"><?php echo $side_title; ?></h3>
-                                            <?php endif; ?>
-
-                                            <?php if ($side_text) : ?>
-                                                <div class="helcraw-fr-side-text"><?php echo $side_text; ?></div>
                                             <?php endif; ?>
                                         </div>
                                     <?php endif; ?>
@@ -1152,7 +1154,7 @@ function helcraw_custom_theme_options()
                                 <div class="helcraw-fr-col col-text-center">
                                     <div class="helcraw-fr-text-wrap">
                                         <?php if ($heading) : ?>
-                                            <h2 class="helcraw-fr-heading"><?php echo $heading; ?></h2>
+                                            <h2 class="sub-heading"><?php echo $heading; ?></h2>
                                         <?php endif; ?>
 
                                         <?php if ($text) : ?>
@@ -1180,7 +1182,7 @@ function helcraw_custom_theme_options()
                             ?>
                                 <div class="helcraw-fr-col col-text-left">
                                     <?php if ($heading) : ?>
-                                        <h2 class="helcraw-fr-heading"><?php echo $heading; ?></h2>
+                                        <h2 class="sub-heading mt-4"><?php echo $heading; ?></h2>
                                     <?php endif; ?>
 
                                     <?php if ($text) : ?>
@@ -1206,7 +1208,7 @@ function helcraw_custom_theme_options()
                                     <?php if ($side_title || $side_img || $side_text) : ?>
                                         <div class="helcraw-fr-side-card">
                                             <?php if ($side_title) : ?>
-                                                <h3 class="helcraw-fr-side-title"><?php echo $side_title; ?></h3>
+                                                <h3 class="sub-heading mt-2"><?php echo $side_title; ?></h3>
                                             <?php endif; ?>
 
                                             <?php if ($side_text) : ?>
@@ -1327,7 +1329,7 @@ function helcraw_custom_theme_options()
                                             $href = esc_url(home_url('/' . ltrim($ans_cta_url, '/')));
                                         }
                                         $target = $ans_cta_external ? ' target="_blank" rel="noopener noreferrer"' : '';
-                                        $ans_cta_html = sprintf('<a class="helcraw-faq-answer-cta" href="%s"%s>%s</a>', $href, $target, esc_html($ans_cta_text));
+                                        $ans_cta_html = sprintf('<a class="hc-btn-icon-secondary" href="%s"%s>%s</a>', $href, $target, esc_html($ans_cta_text));
                                     }
 
                                     // IDs for aria
@@ -1499,11 +1501,6 @@ function helcraw_custom_theme_options()
 
 
 
-
-
-
-
-
     Block::make(__('Expertise Block'))
         ->add_fields(array(
             Field::make('text', 'expertise_heading', 'Heading')
@@ -1538,6 +1535,8 @@ function helcraw_custom_theme_options()
 
             $side_class = $image_left ? 'image-left' : 'image-right';
             ?>
+
+
                 <div class="helcraw-expertise-block ">
                     <div class="helcraw-expertise-inner contain <?php echo esc_attr($side_class); ?>">
                         <div class="helcraw-expertise-column helcraw-expertise-text">

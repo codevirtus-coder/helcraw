@@ -91,6 +91,14 @@ h6 {
   margin-bottom: 24px;
 }
 
+.sub-heading {
+  font-size: clamp(2rem, 2vw, 2rem);
+  line-height: 1;
+  font-weight: 600;
+  color: #1a3c6a;
+  margin-bottom: 24px;
+}
+
 .site-container {
   max-width: var(--site-max-width);
   margin-left: auto;

@@ -72,7 +72,7 @@
 
 
 		<div class="col-12 col-md-4 offset-md-4 d-flex justify-content-center" data-aos="fade-up">
-			<a href="<?php echo home_url('updates') ?>" class="btn btn-primary">
+			<a href="<?php echo home_url('updates') ?>" class="hc-btn-icon-secondary">
 				More News
 			</a>
 		</div>

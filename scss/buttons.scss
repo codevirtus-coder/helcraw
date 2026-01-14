@@ -6,166 +6,166 @@
 
 ********************************/
 
-// 
+//
 // 1. btn-primary
 //
 
 .btn {
-	border-radius: 15px !important;
-	font-weight: 600;
-	text-transform: uppercase;
-	padding: .5rem 2rem .5rem 1rem;
-	transition: var(--bs-transition);
+  border-radius: 15px !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  transition: var(--bs-transition);
 }
 
 .btn-primary {
-	--bs-btn-color: var(--bs-white);
-	--bs-btn-bg: var(--bs-primary);
-	--bs-btn-border-color: var(--bs-primary);
-	--bs-btn-hover-color: var(--bs-white);
-	--bs-btn-hover-bg: var(--bs-secondary);
-	--bs-btn-hover-border-color: var(--bs-secondary);
-	// --bs-btn-focus-shadow-rgb: 49, 132, 253;
-	// --bs-btn-active-color: #fff;
-	// --bs-btn-active-bg: #0a58ca;
-	// --bs-btn-active-border-color: #0a53be;
-	// --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-	// --bs-btn-disabled-color: #fff;
-	// --bs-btn-disabled-bg: #0d6efd;
-	// --bs-btn-disabled-border-color: #0d6efd;
-	text-decoration: none;
-	position: relative;
-	overflow: hidden;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: var(--bs-secondary);
+  --bs-btn-hover-border-color: var(--bs-secondary);
 
-	&::before {
-		display: inline-block;
-		content: "\F138";
-		background-color: var(--bs-secondary);
-		border-radius: 10px;
-		color: var(--bs-white);
-		height: 40px;
-		width: 40px;
-		padding: 8px 10px;
-		position: relative;
-		font-family: "bootstrap-icons" !important;
-		right: 8px;
-	}
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px; // space between icon and text
+  padding: 5px 18px 5px 6px; // button padding (looks like screenshot)
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
 
-	&:hover {
-		&::before {
-			background-color: var(--bs-white);
-			color: var(--bs-primary);
-		}
-	}
+  &::before {
+    content: "\F138";
+    font-family: "bootstrap-icons" !important;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--bs-secondary);
+    color: var(--bs-white);
+
+    padding: 0;
+    flex: 0 0 40px;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  &:hover::before {
+    background-color: var(--bs-white);
+    color: var(--bs-primary);
+  }
 }
 
 .btn-primary.active {
-	cursor: pointer;
-	cursor: not-allowed;
+  cursor: pointer;
+  cursor: not-allowed;
 }
 
-
-// 
+//
 // 2. btn-secondary
 //
 .btn-secondary {
-	--bs-btn-color: var(--bs-primary);
-	--bs-btn-bg: var(--bs-white);
-	--bs-btn-border-color: var(--bs-white);
-	--bs-btn-hover-color: var(--bs-white);
-	--bs-btn-hover-bg: var(--bs-secondary);
-	--bs-btn-hover-border-color: var(--bs-secondary);
-	text-decoration: none;
-	position: relative;
-	overflow: hidden;
-	
-	&::before {
-		display: inline-block;
-		content: "\F138";
-		background-color: var(--bs-primary);
-		border-radius: 10px;
-		color: var(--bs-white);
-		height: 40px;
-		width: 40px;
-		padding: 8px 10px;
-		position: relative;
-		font-family: "bootstrap-icons" !important;
-		right: 8px;
-	}
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-bg: var(--bs-white);
+  --bs-btn-border-color: var(--bs-white);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: var(--bs-secondary);
+  --bs-btn-hover-border-color: var(--bs-secondary);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
 
-	&:hover {
-		&::before {
-			background-color: var(--bs-white);
-			color: var(--bs-primary);
-		}
-	}
+  &::before {
+    display: inline-block;
+    content: "\F138";
+    background-color: var(--bs-primary);
+    border-radius: 5px;
+    color: var(--bs-white);
+    height: 40px;
+    width: 40px;
+    padding: 8px 5px;
+    position: relative;
+    font-family: "bootstrap-icons" !important;
+    right: 8px;
+  }
+
+  &:hover {
+    &::before {
+      background-color: var(--bs-white);
+      color: var(--bs-primary);
+    }
+  }
 }
 
 .btn-secondary.active {
-	cursor: pointer;
-	cursor: not-allowed;
+  cursor: pointer;
+  cursor: not-allowed;
 }
 
-
-
 .btn-light {
-	--bs-btn-color: var(--bs-white);
-	--bs-btn-bg: rgba(255, 255, 255, .2);
-	--bs-btn-border-color: var(--bs-white);
-	--bs-btn-hover-color: var(--bs-white);
-	--bs-btn-hover-bg: var(--bs-secondary);
-	--bs-btn-hover-border-color: var(--bs-secondary);
-	text-decoration: none;
-	position: relative;
-	overflow: hidden;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: rgba(255, 255, 255, 0.2);
+  --bs-btn-border-color: var(--bs-white);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: var(--bs-secondary);
+  --bs-btn-hover-border-color: var(--bs-secondary);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
 
-	&::before {
-		display: inline-block;
-		content: "\F138";
-		background-color: var(--bs-secondary);
-		border-radius: 10px;
-		color: var(--bs-white);
-		height: 40px;
-		width: 40px;
-		padding: 8px 10px;
-		position: relative;
-		font-family: "bootstrap-icons" !important;
-		right: 8px;
-	}
+  &::before {
+    display: inline-block;
+    content: "\F138";
+    background-color: var(--bs-secondary);
+    border-radius: 5px;
+    color: var(--bs-white);
+    height: 40px;
+    width: 40px;
+    padding: 8px 5px;
+    position: relative;
+    font-family: "bootstrap-icons" !important;
+    right: 8px;
+  }
 
-	&:hover {
-		&::before {
-			background-color: var(--bs-white);
-			color: var(--bs-primary);
-		}
-	}
+  &:hover {
+    &::before {
+      background-color: var(--bs-white);
+      color: var(--bs-primary);
+    }
+  }
 }
 
 .btn-light.active {
-	cursor: pointer;
-	cursor: not-allowed;
+  cursor: pointer;
+  cursor: not-allowed;
 }
 
 button.fg-panel-button.fg-panel-button-fullscreen::before {
-	content: none !important
+  content: none !important;
 }
 
-button.fg-panel-button.fg-panel-button-close::before{
-	content: none !important
+button.fg-panel-button.fg-panel-button-close::before {
+  content: none !important;
 }
-button.fg-panel-button.fg-panel-button-next::before{
-	content: none !important
-}
-
-button.fg-panel-button.fg-panel-button-prev::before{
-	content: none !important
+button.fg-panel-button.fg-panel-button-next::before {
+  content: none !important;
 }
 
-button.fg-panel-button.fg-panel-button-info.fg-disabled::before{
-	content: none !important
+button.fg-panel-button.fg-panel-button-prev::before {
+  content: none !important;
 }
 
-// 
+button.fg-panel-button.fg-panel-button-info.fg-disabled::before {
+  content: none !important;
+}
+
+//
 // 3. wordpres buttons
 //
 
@@ -174,36 +174,27 @@ button.fg-panel-button.fg-panel-button-info.fg-disabled::before{
 .button,
 input[type="submit"],
 button {
-	@extend .btn; // Extends Bootstrap button base
-	@extend .btn-primary; // Default primary button
+  @extend .btn; // Extends Bootstrap button base
+  @extend .btn-primary; // Default primary button
 }
 
 // Adjust block buttons inside Gutenberg editor
 .wp-block-button {
-	.wp-block-button__link {
-		@extend .btn;
-		@extend .btn-primary;
-	}
+  .wp-block-button__link {
+    @extend .btn;
+    @extend .btn-primary;
+  }
 }
 
-
-
-
-
-// 
+//
 // 4. Search form clear
 //
 // Built-in clear "x" button inside search input is controlled by browser-specific pseudo-elements but...
-
-
 
 // // 1) Remove the Default Clear Icon Appearance
 // input[type="search"]::-webkit-search-cancel-button {
 // 	-webkit-appearance: none;
 // }
-
-
-
 
 // // 2) Add a Custom Clear Icon
 // input[type="search"] {
@@ -214,3 +205,142 @@ button {
 // 	background-position: right 0.75rem center;
 // 	background-size: 1rem;
 // }
+
+.hc-btn-icon {
+  /* button body */
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 5px 18px 5px 6px;
+  border-radius: 8px;
+
+  background: #79bee6; /* light blue like screenshot */
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1;
+
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hc-btn-icon-primary {
+  /* button body */
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 18px 5px 6px;
+  border-radius: 8px;
+  background: #1a3c6a;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1;
+
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hc-btn-icon-secondary {
+  /* button body */
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 18px 5px 6px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #00000033;
+  color: #1a3c6a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1;
+
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hc-btn-icon-secondary::before {
+  /* left icon box */
+  content: "»";
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #1a3c6a;
+  color: #ffffff;
+
+  font-size: 18px;
+  line-height: 1;
+}
+
+.hc-btn-icon::before {
+  /* left icon box */
+  content: "»";
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #1a3c6a;
+  color: #ffffff;
+
+  font-size: 18px;
+  line-height: 1;
+}
+
+.hc-btn-icon-primary::before {
+  /* left icon box */
+  content: "»";
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #6fbbe6;
+  color: #ffffff;
+
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* hover (optional) */
+.hc-btn-icon:hover {
+  background: #1a3c6a;
+  color: #ffffff;
+}
+
+.hc-btn-icon-secondary:hover {
+  background: #1a3c6a;
+  color: #ffffff;
+}
+
+.hc-btn-icon-primary:hover {
+  background: #6fbbe6;
+  color: #fff;
+}
+
+.hc-btn-icon:hover::before {
+  background: #ffffff;
+  color: #1a3c6a;
+}
+
+.hc-btn-icon-primary:hover::before {
+  background: #1a3c6a;
+  color: #fff;
+}
+
+.hc-btn-icon-secondary:hover::before {
+  background: #fff;
+  color: #1a3c6a;
+}
